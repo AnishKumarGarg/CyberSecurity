@@ -1,0 +1,2 @@
+List based on set of rules to in routers to filter which traffic is allowed and which is not allowed.
+https://www.youtube.com/watch?v=vMshgkItW5g
