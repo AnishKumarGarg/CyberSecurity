@@ -1,0 +1,54 @@
+1. What is CIA triad? How do you ensure each? (Technical)?
+2. What is NAT(Network Address translation)?
+3.icmp
+4.arp
+
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+ssh bandit6@bandit.labs.overthewire.org -p 2220 
+
+
+file ./*
+
+5. Access Control
+6. https: 443
+   http: 80
+   ftp:21
+   ftp-data:20
+   smtp:25
+   telnet:23
+   NETBIOS:139
+   SMB:445
+
+7. Cross site (XSS) scripting
+8. sql injections
+9. How to prevent sql injection attacks?
+Ans. 1. Use Parameterized Statements: Instead of directly embedding user input in SQL queries, use parameterized statements (prepared statements) provided by your programming language or framework. Parameterized statements separate SQL code from user input, preventing injection attacks.Example (Java using PreparedStatement):
+
+String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+PreparedStatement pstmt = connection.prepareStatement(query);
+pstmt.setString(1, username);
+pstmt.setString(2, password);
+ResultSet rs = pstmt.executeQuery();
+
+2. Input Validation and Sanitization: Validate and sanitize all user input before using it in SQL queries. This includes checking data types, length, and format to ensure they meet expected criteria.
+Least Privilege Principle: Ensure that your database user accounts have the minimum privileges necessary for their function. Avoid using an account with full database access in your application.
+
+3. Avoid Dynamic SQL Queries: Avoid constructing SQL queries dynamically using string concatenation. If dynamic queries are necessary, use parameterized queries as mentioned in point 1.
+
+4. Use Object-Relational Mapping (ORM) Libraries: Use ORM libraries such as Hibernate, Entity Framework, or Sequelize. These libraries handle parameterized queries and provide a safer way to interact with databases without writing raw SQL.
+Update Software Regularly: Keep your database management system (DBMS), web server, and application frameworks up to date with the latest security patches.
+
+5. Security Configuration: Configure your database and application server to use secure settings, such as disabling unnecessary services and features.
+
+6. Error Handling: Implement proper error handling to prevent detailed error messages from being displayed to users, as they can provide attackers with information to exploit vulnerabilities.
+
+By implementing these practices, you can significantly reduce the risk of SQL injection attacks in your application.
+
+https://chatgpt.com/c/4f705eed-dd7c-43ef-812d-3486a5797431
+
+7. HTTP security headers
+
+8. What is dns poisoning
+
+9. What is a replacement for firewalls?
+Ans. IDS

@@ -1,0 +1,2 @@
+https://www.youtube.com/watch?v=qij5qpHcbBk
+NAT(Network Address translation):Primarily used to conserve IPv4 addresses

@@ -1,0 +1,18 @@
+CSRF stands for Cross-Site Request Forgery. It is a type of attack where a malicious website, email, or other means tricks a user's browser into executing unwanted actions on a different website where the user is authenticated.
+
+Here's how CSRF works:
+
+1.User Authentication: The user is authenticated on a website (e.g., a banking site) and receives a session cookie.
+2.Malicious Request: While still authenticated, the user visits a malicious website or clicks on a malicious link. This site contains a hidden form or script that sends a request to the target website (e.g., transfer money) using the user's authentication cookie.
+3.Unintended Action: Since the request comes from a trusted user, the target website processes the request as if it were legitimate, potentially leading to unauthorized actions being performed.
+
+Example:
+
+Let's say you are logged into your banking website and also have a malicious website open in another tab. The malicious website contains an image tag like this:
+
+<img src="http://bank.com/transfer?to=attacker&amount=1000" />
+
+When your browser loads this image, it will also send a request to the banking website to transfer $1000 to the attacker's account, using your authentication cookie. Since the request is from your browser with your authentication, the banking website might process the request, thinking it's legitimate.
+
+Further detail:
+https://chatgpt.com/c/205a5c4d-0219-4bc1-801b-af2537844b96
