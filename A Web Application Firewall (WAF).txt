@@ -1,0 +1,4 @@
+A Web Application Firewall (WAF) is a security system designed to protect web applications by filtering and monitoring HTTP/HTTPS traffic between a web application and the internet. 
+
+More info
+https://chatgpt.com/c/74172973-3afc-4ba4-852e-bbad1e8e6b33
